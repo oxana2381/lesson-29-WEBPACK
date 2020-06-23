@@ -1,6 +1,7 @@
 const path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
         entry: './src/js/my_file_index.js',
@@ -10,24 +11,54 @@ module.exports = {
         },
         module: {
             rules: [
-    
+                
                 {
-                    test: /\.scss$/,
-                    
-                    use: [
+                    test: /\.(sa|sc|c)ss$/,
+                   use: [
+                       // {
+                        //   loader: 'css-hot-loader',
+                     //  },
                         {
                             loader: MiniCssExtractPlugin.loader,
                         },
                         'css-loader',
                         'sass-loader',
                     ],
-                }
+                },
             ]
         },
-        plugins: [
-            new MiniCssExtractPlugin({
-                filename: "styles.css"
-            }),
-        ]
-    };
-     
+       
+
+plugins: [
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({
+        filename: 'style.css'
+    }),
+    
+        
+   
+    
+
+    new HtmlWebpackPlugin({
+        filename: 'index.html',
+        template: '!!ejs-webpack-loader!./index.ejs'
+    }),
+    
+    new HtmlWebpackPlugin({
+        filename: 'about.html',
+        template: '!!ejs-webpack-loader!./about.ejs'
+    }),
+    new HtmlWebpackPlugin({
+        filename: 'listCity.html',
+        template: '!!ejs-webpack-loader!./listCity.ejs'
+    }),
+],
+
+devServer: {
+    contentBase: path.resolve(__dirname, 'build'),
+    compress: true,
+    writeToDisk: true,
+    watchContentBase: true,
+    port: 9000,
+}
+}; 
