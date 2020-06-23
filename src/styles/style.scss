@@ -82,11 +82,13 @@
 .conteiner__weather{
    position: absolute;
     top: 70px;
-    left: 130px;
     background-color: #ece9f1;
     text-shadow: 0 0 black;
     padding: 20px;
     background-color: hsla(216, 20%, 93%, 0.45);
+    text-align: center;
+    right: 40%;
+    color: #202888;
 
     
 }
@@ -98,4 +100,75 @@
 }
 #listCity{
    width: 100%;
+}
+@include isDesktop {
+   .header{
+      height: 80px;
+      p1{
+    position: absolute;
+    left: 40%;
+    font-size: 30px;
+    top: 18px;
+      }
+   }
+   #list{
+      right: 5%;
+      li a{
+         font-size: 20px;
+      }
+   }
+   #date{
+    top: 30px;
+    font-size: 20px;
+   }
+   .conteiner__weather{
+    left: 40%;
+    top: 80px;
+    padding: 90px;
+    font-size: 30px;
+    color: #3a327d;
+    font-style: oblique;
+
+   }
+   .location__select{
+    left: 5%;
+    padding: 0 30px;
+    font-size: 20px;
+
+   }
+}
+@include isTablet {
+   .header{
+      height: 80px;
+      p1{
+    position: absolute;
+    left: 35%;
+    font-size: 30px;
+    top: 18px;
+      }
+   }
+   #list{
+      right: 5%;
+      li a{
+         font-size: 20px;
+      }
+   }
+   #date{
+    top: 30px;
+    font-size: 20px;
+   }
+   .conteiner__weather{
+      top: 80px;
+      padding: 80px;
+      font-size: 25px;
+      color: #3a327d;
+      font-style: oblique;
+      right: 30%;
+
+   }
+   .location__select{
+    left: 5%;
+    font-size: 20px;
+
+   }
 }

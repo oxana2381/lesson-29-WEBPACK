@@ -25,11 +25,16 @@ export const cities =  {
     },
     bucharest:{
         url: "https://img-cdn.tinkoffjournal.ru/main____buharest___shutterstock_1398300263.6lgloqsptvic.jpg",
+    
         name: "Bucharest"
     },
     rome:{
         url: "https://italiatut.com/wp-content/uploads/colosseum-skip-the-line-tickets-and-ancient-rome-walking-tour_header-19831-794x476.jpeg",
         name: "Rome"
+    },
+    toronto:{
+        url: "https://studybridge.com.ua/upload/image/toronto_2.jpg",
+        name: "Toronto"
     },
 
 

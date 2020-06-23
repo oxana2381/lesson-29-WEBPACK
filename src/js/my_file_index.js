@@ -1,5 +1,6 @@
 import '../styles/style.scss';
 import './date.js';
+import './localStorage.js'
 import { cities } from '../data/cityPhoto.js';
 import { getByCity } from './api.js';
 
@@ -19,6 +20,7 @@ function createCityDropdown(cities) {
     let conteinerWeather=document.querySelector('.conteiner__weather');
     let nameCity=document.getElementById('name__city');
     let weatherInformation=document.getElementById('weather__information');
+    let description=document.getElementById('description');
 
     const k2c = 273.15;
    
@@ -44,8 +46,10 @@ function createCityDropdown(cities) {
     .then(data => {
 
         
-        nameCity.innerText = data.name;
-       weatherInformation.innerText =  Math.floor(data.main.temp - k2c)+ '°' + 'C';
+    nameCity.innerText = data.name;
+    weatherInformation.innerText = Math.floor( data.main.temp - k2c )+ '°' + 'C';
+    description.innerText = data.weather[0].description;
+
         
 
     }
