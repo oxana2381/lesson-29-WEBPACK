@@ -55,11 +55,12 @@
 }
  
 }
-#list{
-   position: absolute;
-    padding-left: 200px;
+#navigation{
+   
+    padding-left: 100px;
 
    ul {
+      display: flex;
       list-style-type: none;
       margin: 0;
       padding: 0;
@@ -68,6 +69,11 @@
   
   li {
       float: left;
+      &.active {
+         border: 1px solid blue;
+         border-radius: 5px;
+         background-color: #e2d8d8;
+     }
   }
   
   li a {
@@ -111,8 +117,8 @@
     top: 18px;
       }
    }
-   #list{
-      right: 5%;
+   #navigation{
+      padding-left: 800px;
       li a{
          font-size: 20px;
       }
@@ -147,8 +153,8 @@
     top: 18px;
       }
    }
-   #list{
-      right: 5%;
+   #navigation{
+     
       li a{
          font-size: 20px;
       }

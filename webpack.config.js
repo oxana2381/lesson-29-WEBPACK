@@ -4,11 +4,16 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-        entry: './src/js/my_file_index.js',
-        output: {
-           path: path.resolve(__dirname, 'build'),
-           filename: 'bundle.js'
-        },
+    entry: {
+        index: './src/js/my_file_index.js',
+        shared: './src/js/shared.js',
+        cities: './src/js/cities.js',
+        about: './src/js/about.js'
+    },
+    output: {
+        path: path.resolve(__dirname, 'build'),
+        filename: '[name].js'
+    },
         module: {
             rules: [
                 
@@ -17,7 +22,7 @@ module.exports = {
                    use: [
                        // {
                         //   loader: 'css-hot-loader',
-                     //  },
+                      // },
                         {
                             loader: MiniCssExtractPlugin.loader,
                         },
@@ -41,16 +46,19 @@ plugins: [
 
     new HtmlWebpackPlugin({
         filename: 'index.html',
-        template: '!!ejs-webpack-loader!./index.ejs'
+        template: '!!ejs-webpack-loader!./index.ejs',
+        chunks: ['shared','index']
     }),
     
     new HtmlWebpackPlugin({
         filename: 'about.html',
-        template: '!!ejs-webpack-loader!./about.ejs'
+        template: '!!ejs-webpack-loader!./about.ejs',
+        chunks: ['shared','about']
     }),
     new HtmlWebpackPlugin({
         filename: 'listCity.html',
-        template: '!!ejs-webpack-loader!./listCity.ejs'
+        template: '!!ejs-webpack-loader!./listCity.ejs',
+        chunks: ['shared','cities']
     }),
 ],
 
