@@ -23,7 +23,7 @@ function renderCity(data){
     
     cityContainer.innerText = ` ${data.name}`+':';
     cityContainer.append(cityTemp);
-     cityTemp.innerText =  Math.floor( data.main.temp )+ '°C' ;
+     cityTemp.innerText =  Math.floor( data.main.temp )+ '°C'+ '' ;
      cityTemp.append(cityDescription);
     container.append(cityContainer);
 
