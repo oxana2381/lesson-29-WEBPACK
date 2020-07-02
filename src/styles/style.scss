@@ -1,4 +1,5 @@
 @import '_mixins';
+@import './list.scss';
 
 *{
    margin: 0;
@@ -13,6 +14,7 @@
    display: flex;
    position: relative;
    align-items: center;
+   
 
    p1{
       font-size: 14px;
@@ -103,10 +105,30 @@
 }
 #about{
    width: 100%;
+   
 }
 #listCity{
    width: 100%;
+
+
+
+.conteiner__list{
+   color: red;
+}}
+
+.info{
+   border: 2px solid;
+    border-radius: 7px;
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    background-color: white;
+    background-color: #ece3e3;
+    color: #4a3333;
 }
+
+
+
 @include isDesktop {
    .header{
       height: 80px;

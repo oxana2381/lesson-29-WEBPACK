@@ -1,0 +1,1 @@
+import { getWeatherByCity } from './api';

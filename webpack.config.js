@@ -8,7 +8,8 @@ module.exports = {
         index: './src/js/my_file_index.js',
         shared: './src/js/shared.js',
         cities: './src/js/cities.js',
-        about: './src/js/about.js'
+        about: './src/js/about.js',
+        forecast: './src/js/forecast.js'
     },
     output: {
         path: path.resolve(__dirname, 'build'),
@@ -21,7 +22,7 @@ module.exports = {
                     test: /\.(sa|sc|c)ss$/,
                    use: [
                        // {
-                        //   loader: 'css-hot-loader',
+                       //    loader: 'css-hot-loader',
                       // },
                         {
                             loader: MiniCssExtractPlugin.loader,
@@ -60,8 +61,13 @@ plugins: [
         template: '!!ejs-webpack-loader!./listCity.ejs',
         chunks: ['shared','cities']
     }),
+    new HtmlWebpackPlugin({
+        filename: 'forecast.html',
+        template: '!!ejs-webpack-loader!./forecast.ejs',
+        chunks: ['shared','forecast']
+    })
 ],
-
+devtool: 'eval-source-map',
 devServer: {
     contentBase: path.resolve(__dirname, 'build'),
     compress: true,

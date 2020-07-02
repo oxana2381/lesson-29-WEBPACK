@@ -21,7 +21,7 @@ function renderSelectCity(cityKey){
    
 
     getWeatherByCity(cities[cityKey].name)
-    .then(response => response.json())
+   // .then(response => response.json())
     .then(data => {
 
         
@@ -33,7 +33,7 @@ function renderSelectCity(cityKey){
 function createCityDropdown(cities) {
     let select=document.createElement('select');
     let target=document.querySelector('.location');
-    //if(!target)return;
+    if(!target)return;
     select.setAttribute('name','city-selector');
     select.setAttribute('id','city-selector');
     select.setAttribute('class',"location__select");
