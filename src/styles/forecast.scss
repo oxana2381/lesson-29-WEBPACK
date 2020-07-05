@@ -23,7 +23,7 @@
         border: 2px solid;
         border-radius: 8px;
         margin-bottom: 20px;
-        height: 120px;
+        height: 130px;
         width: 60%;
         text-align: center;
         text-shadow: -1px 1px 8px black;
@@ -37,6 +37,23 @@
         
     }
 
-
+    @include isDesktop{
+        h1{
+            font-size: 50px;
+            margin-top: 60px;
+        }
+        .forecast-mainbox{
+            display: flex;
+           flex-flow: row;
+           height: 390px;
+        }
+        .forecastBox{
+            height: 250px;
+            margin: 20px;
+        }
+        span{
+            font-size: 40px;
+        }
+    }
 
 
