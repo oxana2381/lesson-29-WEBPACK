@@ -1,7 +1,10 @@
+
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+//const CopyPlugin = require('copy-webpack-plugin');
+
 
 module.exports = {
     entry: {
@@ -15,25 +18,24 @@ module.exports = {
         path: path.resolve(__dirname, 'build'),
         filename: '[name].js'
     },
-        module: {
-            rules: [
-                
-                {
-                    test: /\.(sa|sc|c)ss$/,
-                   use: [
-                       // {
-                       //    loader: 'css-hot-loader',
-                      // },
-                        {
-                            loader: MiniCssExtractPlugin.loader,
-                        },
-                        'css-loader',
-                        'sass-loader',
-                    ],
-                },
-            ]
-        },
-       
+     
+      module: {
+        rules: [
+            {
+                test: /\.(sa|sc|c)ss$/,
+                use: [
+                 //  {
+                       // loader: 'css-hot-loader',
+                  //  },
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                    },
+                    'css-loader',
+                    'sass-loader',
+                ],
+            },
+        ]
+    },
 
 plugins: [
     new CleanWebpackPlugin(),

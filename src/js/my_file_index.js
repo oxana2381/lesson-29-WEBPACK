@@ -1,7 +1,8 @@
 
 import './date.js';
 import { cities } from '../data/cityPhoto.js';
-import {  getWeatherByCity } from './api.js';
+import {  getWeatherByCity} from './api.js';
+
 
 
 let conteinerWeather=document.querySelector('.conteiner__weather');
@@ -76,6 +77,9 @@ const selectedCity = localStorage.getItem('selectedCity');
 
 
 if(selectedCity) {
+
+ 
+
     let selectedCityElement = document.getElementById(selectedCity)
     if(selectedCityElement){
         selectedCityElement.selected = true

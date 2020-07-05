@@ -1,0 +1,41 @@
+@import '_mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+    body{
+        background-color: #61968b;
+
+    h1{
+        color: white;
+    text-shadow: 0 0 4px black;
+    text-align: center;
+    }}
+
+    .forecast-mainbox{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    .forecastBox{
+        border: 2px solid;
+     border-radius: 8px;
+     height: 70px;
+     width: 60%;
+     text-align: center;
+     text-shadow: -1px 1px 8px black;
+    color: white;
+    background-color: #0a3844;
+
+    span{
+    display: flex;
+    flex-direction: column;
+    }
+        
+    }
+
+
+
+

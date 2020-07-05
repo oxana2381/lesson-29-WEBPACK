@@ -1,5 +1,6 @@
 @import '_mixins';
 @import './list.scss';
+@import './forecast.scss';
 
 *{
    margin: 0;
@@ -127,7 +128,7 @@
       }
    }
    #navigation{
-      padding-left: 800px;
+      padding-left: 700px;
       li a{
          font-size: 20px;
       }

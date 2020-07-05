@@ -1,6 +1,6 @@
 
 
-
+import './date.js';
 import {  getWeatherByCity } from './api';
 import { cities } from '../data/cityPhoto';
 
@@ -20,6 +20,8 @@ function renderCity(data){
     cityDescription.innerText = data.weather[0].description;
     cityDescription.append(cityWind);
     cityWind.innerText = 'Wind'+':'+ data.wind.speed +'m/s' ;
+
+    
     
     cityContainer.innerText = ` ${data.name}`+':';
     cityContainer.append(cityTemp);
