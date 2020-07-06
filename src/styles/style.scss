@@ -1,4 +1,4 @@
-@import '_mixins';
+@import '_mixins.scss';
 @import './list.scss';
 @import './forecast.scss';
 
@@ -7,6 +7,11 @@
    padding: 0;
    box-sizing: border-box;
 }
+body{
+   background-color:#f3f2fb ;
+}
+
+
 .header{
    width: 100%;
    background-color: #eeedf5;
@@ -42,7 +47,7 @@
 .location{
    width: 100%;
    background-color: #f3f2fb;
-   height: 300px;
+   height: 250px;
    position: relative;
 
    img{
@@ -121,6 +126,7 @@
 @include isDesktop {
    .header{
       height: 80px;
+      width: 100%;
       p1{
     position: absolute;
     left: 40%;
@@ -152,7 +158,11 @@
     padding: 0 30px;
     font-size: 20px;
 
-   }
+   
+   .location{
+      height: 700px;
+      width: 100%;
+   }}
 }
 @include isTablet {
    .header{
