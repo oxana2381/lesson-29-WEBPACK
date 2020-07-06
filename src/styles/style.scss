@@ -118,7 +118,13 @@ body{
    width: 100%;
 
 }
-
+.main-footer{
+   height: 50px;
+    background-color: #9e9ba9;
+    text-align: center;
+    padding-top: 20px;
+    color:#0c2656 ;
+}
 
 
 
@@ -164,6 +170,8 @@ body{
          padding: 0 30px;
          font-size: 20px;
    }
+   .main-footer{
+      height: 90px;}
 }
 @include isTablet {
    .header{
