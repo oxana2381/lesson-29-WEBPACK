@@ -9,8 +9,8 @@
         background-color: #61968b;
 
     h1{
-        color: white;
-        text-shadow: 6px -6px black;
+        color: #6abfa4;
+    text-shadow: 3px -1px black;
     text-align: center;
     }}
 
@@ -18,6 +18,7 @@
      display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #459a9173;
     }
     .forecastBox{
         border: 2px solid;
@@ -26,13 +27,13 @@
         height: 130px;
         width: 60%;
         text-align: center;
-        text-shadow: -1px 1px 8px black;
         color: white;
-        background-color: #0a3844;
+        background-color: #418c83;
+        text-shadow: 2px 0px 2px black;
     span{
     display: flex;
     flex-direction: column;
-    font-size: 18px;
+    font-size: 16px;
     }
         
     }

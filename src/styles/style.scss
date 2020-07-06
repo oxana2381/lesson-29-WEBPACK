@@ -153,16 +153,18 @@ body{
     font-style: oblique;
 
    }
-   .location__select{
-    left: 5%;
-    padding: 0 30px;
-    font-size: 20px;
+   
 
    
    .location{
       height: 700px;
-      width: 100%;
-   }}
+      width: 100%;}
+
+      .location__select{
+         left: 5%;
+         padding: 0 30px;
+         font-size: 20px;
+   }
 }
 @include isTablet {
    .header{
