@@ -124,6 +124,10 @@ body{
 
 
 @include isDesktop {
+    
+   .location{
+      height: 700px;
+      width: 100%;}
    .header{
       height: 80px;
       width: 100%;
@@ -154,11 +158,6 @@ body{
 
    }
    
-
-   
-   .location{
-      height: 700px;
-      width: 100%;}
 
       .location__select{
          left: 5%;
