@@ -31,7 +31,7 @@ if(selectedCity) {
 
                
                 let mainBox = document.querySelector('.forecast-mainbox');
-                let title = document.createElement('span');
+                let title = document.createElement('h1');
                 let forecastInfoBox =document.createElement('div');
                 forecastInfoBox.setAttribute('class','forecastBox');
                 let forecastDate = document.createElement('span');
@@ -52,7 +52,7 @@ if(selectedCity) {
                 let forecastWind = document.createElement('span');
                 forecastWind.innerText = 'Wind'+':'+ item.wind.speed +'m/s';
 
-                title.prepend(mainBox);
+                title.append(mainBox);
                 mainBox.append(forecastInfoBox);
                 forecastInfoBox.append(forecastDate);
                 forecastDate.append(forecastName);
