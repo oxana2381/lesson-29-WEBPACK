@@ -42,9 +42,9 @@ if(selectedCity) {
                     let dd = day < 10 ? '0' + day : day;
                 forecastDate.innerText = dd + "." + mm + "." + year;
 
-                 title.innerText=cities[selectedCity].name + 'Forecast';
-                let forecastName = document.createElement('span');
-                forecastName.innerText = cities[selectedCity].name;
+                 title.innerText=cities[selectedCity].name + '' + 'Forecast';
+               // let forecastName = document.createElement('span');
+               // forecastName.innerText = cities[selectedCity].name;
                 let forecastTemp = document.createElement('span');
                 forecastTemp.innerText =  Math.floor( item.main.temp )+ '°C'+ '' ;
                 let forecastDescription = document.createElement('span');
@@ -52,11 +52,11 @@ if(selectedCity) {
                 let forecastWind = document.createElement('span');
                 forecastWind.innerText = 'Wind'+':'+ item.wind.speed +'m/s';
 
-               // title.append(mainBox);
+              
                 mainBox.append(forecastInfoBox);
                 forecastInfoBox.append(forecastDate);
-                forecastDate.append(forecastName);
-                forecastName.append(forecastTemp);
+                forecastDate.append(forecastTemp);
+               // forecastName.append(forecastTemp);
                 forecastTemp.append(forecastDescription);
                 forecastDescription.append( forecastWind);
                
