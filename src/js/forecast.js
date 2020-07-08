@@ -42,7 +42,7 @@ if(selectedCity) {
                     let dd = day < 10 ? '0' + day : day;
                 forecastDate.innerText = dd + "." + mm + "." + year;
 
-                 title.innerText=cities[selectedCity].name + '' + 'Forecast';
+                 title.innerText=cities[selectedCity].name + '-' + 'Forecast';
                // let forecastName = document.createElement('span');
                // forecastName.innerText = cities[selectedCity].name;
                 let forecastTemp = document.createElement('span');
