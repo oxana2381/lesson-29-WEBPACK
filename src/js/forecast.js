@@ -31,7 +31,7 @@ if(selectedCity) {
 
                
                 let mainBox = document.querySelector('.forecast-mainbox');
-               // let title = document.createElement('h1');
+                let title = document.querySelector('h1');
                 let forecastInfoBox =document.createElement('div');
                 forecastInfoBox.setAttribute('class','forecastBox');
                 let forecastDate = document.createElement('span');
@@ -42,7 +42,7 @@ if(selectedCity) {
                     let dd = day < 10 ? '0' + day : day;
                 forecastDate.innerText = dd + "." + mm + "." + year;
 
-                 //title.innerText=cities[selectedCity].name + 'Forecast';
+                 title.innerText=cities[selectedCity].name + 'Forecast';
                 let forecastName = document.createElement('span');
                 forecastName.innerText = cities[selectedCity].name;
                 let forecastTemp = document.createElement('span');
