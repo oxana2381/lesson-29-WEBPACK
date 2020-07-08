@@ -28,8 +28,10 @@ if(selectedCity) {
         
             const time = new Date(item.dt_txt).getHours();
             if (time === 12 ){
-                
+
+               
                 let mainBox = document.querySelector('.forecast-mainbox');
+                let title = document.createElement('span');
                 let forecastInfoBox =document.createElement('div');
                 forecastInfoBox.setAttribute('class','forecastBox');
                 let forecastDate = document.createElement('span');
@@ -39,6 +41,8 @@ if(selectedCity) {
                     let mm = month < 10 ? '0' + month : month;
                     let dd = day < 10 ? '0' + day : day;
                 forecastDate.innerText = dd + "." + mm + "." + year;
+
+                 title.innerText=cities[selectedCity].name + 'Forecast';
                 let forecastName = document.createElement('span');
                 forecastName.innerText = cities[selectedCity].name;
                 let forecastTemp = document.createElement('span');
@@ -48,6 +52,7 @@ if(selectedCity) {
                 let forecastWind = document.createElement('span');
                 forecastWind.innerText = 'Wind'+':'+ item.wind.speed +'m/s';
 
+                title.prepend(mainBox);
                 mainBox.append(forecastInfoBox);
                 forecastInfoBox.append(forecastDate);
                 forecastDate.append(forecastName);
